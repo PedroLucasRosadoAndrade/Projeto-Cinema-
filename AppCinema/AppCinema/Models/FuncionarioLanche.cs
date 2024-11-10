@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppCinema
+namespace AppCinema.Models
 {
     internal class FuncionarioLanche
     {
