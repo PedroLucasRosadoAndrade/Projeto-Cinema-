@@ -15,6 +15,7 @@ namespace AppCinema.Models
         public int Classificacao;
         public string Idioma;
         public string Atores;
+        public int QuantiIngre;
 
 
         // get obtem valor
@@ -84,16 +85,30 @@ namespace AppCinema.Models
             return this.Atores = atoFil;
         }
 
-        public  Filme(string nomeFilm, string datalanFil, string datafechFil, int classiFil)
+        public int getQuat()
+        {
+            return this.QuantiIngre;
+
+        }
+        public int setQuat(int quanIng)
+        {
+            return this.QuantiIngre = quanIng;
+        }
+
+        public Filme(string nomeFilm, string datalanFil, string datafechFil, int classiFil)
         {
             this.Nome = nomeFilm;
             this.DataLanc = datalanFil;
             this.DataFecha = datafechFil;
             this.Classificacao = classiFil;
-            
-
-
+          
         }
+        public Filme(string nomeFilm)
+        {
+            this.Nome = nomeFilm;
+            
+        }
+
         public void CadastrarFilme()
         {
 
@@ -118,6 +133,9 @@ namespace AppCinema.Models
             Console.Write("Digite dois atores no minimo: ");
             Atores = Console.ReadLine();
 
+            Console.Write("Digite a quantidade de ingressos disponiveis: ");
+            QuantiIngre = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("\nFilme cadastrado com sucesso!");
 
 
@@ -133,6 +151,7 @@ namespace AppCinema.Models
             Console.WriteLine($"Classificação: {Classificacao}");
             Console.WriteLine($"Idioma: {Idioma}");
             Console.WriteLine($"Atores: {Atores}");
+            Console.WriteLine($"Quantidade de ingressos: {QuantiIngre}");
             Console.WriteLine("\n");
         }
 
@@ -140,5 +159,13 @@ namespace AppCinema.Models
         {
             return idade >= Classificacao;
         }
+
+        public void CalularDiasCartas()
+        {
+            Console.WriteLine("O filme ");
+        }
+
+        
+
     }
 }
