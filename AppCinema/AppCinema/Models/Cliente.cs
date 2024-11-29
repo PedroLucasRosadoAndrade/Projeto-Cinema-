@@ -15,5 +15,35 @@ namespace AppCinema.Models
         public string DataPag { get; set; }
         public string HoraPag { get; set; }
         public string Banco { get; set; }
+
+        public string getNome()
+        {
+            return this.Nome;
+
+        }
+        public string setNome(string nomCli)
+        {
+            return this.Nome = nomCli;
+        }
+
+        public int getIdade()
+        {
+            return this.Idade;
+
+        }
+        public int setID(int idadeCli)
+        {
+            return this.Idade = idadeCli;
+        }
+
+        public double getValor()
+        {
+            return this.Valor;
+
+        }
+        public double setValor(double valorCli)
+        {
+            return this.Valor = valorCli;
+        }
     }
 }
